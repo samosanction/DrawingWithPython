@@ -1,4 +1,5 @@
 import pyautogui
+from mss import mss, tools
 
 print(pyautogui.position())
 pyautogui.moveTo(x=945, y=281, duration=1)
@@ -21,3 +22,8 @@ pyautogui.drag(0, -120, duration=1, button='left') # Up 120px
 pyautogui.move(0, -40, duration=0.3) # 40px up
 pyautogui.drag(0, -40, duration=0.3, button='left')
 pyautogui.drag(-220, 0, duration=1, button='left')
+pyautogui.move(-50, -50)
+with mss() as screen:
+    part = {'top': 245 , 'left': 908, 'width': 400,'height': 320}
+    image = screen.grab(part)
+    tools.to_png(image.rgb, image.size, output='output2.png')
