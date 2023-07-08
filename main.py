@@ -18,4 +18,6 @@ pyautogui.move(0, 3, duration=0.3) # Down back 4px
 pyautogui.drag(100, 0, duration=1, button='left') # Right 100px
 pyautogui.drag(0, -120, duration=1, button='left') # Up 120px
 
-pyautogui.move(0, -40, duration=0.3)
+pyautogui.move(0, -40, duration=0.3) # 40px up
+pyautogui.drag(0, -40, duration=0.3, button='left')
+pyautogui.drag(-220, 0, duration=1, button='left')
